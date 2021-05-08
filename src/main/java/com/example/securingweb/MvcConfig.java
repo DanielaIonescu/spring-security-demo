@@ -6,26 +6,30 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.io.*;
-import java.util.Arrays;
 
 @Configuration
 public class MvcConfig implements WebMvcConfigurer, Serializable {
-
-    Console c = System.console();
 
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/home").setViewName("home");
         registry.addViewController("/hello").setViewName("hello");
         registry.addViewController("/login").setViewName("login");
-
-
-
-
     }
 
-    @GetMapping("/")
-    public String index() {
-        return "home";
-    }
+//
+//    @GetMapping("/home")
+//    public String home() {
+//        return "home";
+//    }
+//
+//    @GetMapping("/hello")
+//    public String hello() {
+//        return "hello";
+//    }
+//
+//    @GetMapping("/login")
+//    public String login() {
+//        return "login";
+//    }
 
 }
